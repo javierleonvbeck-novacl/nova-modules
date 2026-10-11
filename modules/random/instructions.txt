@@ -1,0 +1,3 @@
+Module: random
+Description: Generates pseudo-random numbers up to a specified limit.
+Syntax: my_var = random(100)
