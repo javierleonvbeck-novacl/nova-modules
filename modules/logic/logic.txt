@@ -1,0 +1,9 @@
+Descripción:
+
+El módulo logic dota a Nova de capacidades de cálculo matemático avanzado y control temporal de ejecución. Permite que los scripts realicen operaciones aritméticas complejas más allá de una simple resta, y añadan pausas controladas para sincronizar bucles o automatizaciones.
+
+Funcionalidades principales:
+
+Operaciones Aritméticas (+, -, *, /): Soporta expresiones matemáticas de dos operandos (tanto valores estáticos como variables) para asignar resultados directamente.
+
+Control de Pausas (sleep(seconds)): Detiene la ejecución del script por una cantidad determinada de segundos de forma nativa.

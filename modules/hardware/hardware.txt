@@ -1,0 +1,9 @@
+El módulo hardware conecta a Nova directamente con el mundo físico y los sensores internos de la Raspberry Pi. Permite realizar tareas de domótica y robótica ligera sin depender de librerías externas complejas, interactuando directamente con el sistema de archivos del kernel de Linux (/sys/class).
+
+Funcionalidades principales:
+
+Temperatura del CPU (get_cpu_temp()): Lee los sensores térmicos internos del procesador de la Raspberry Pi y devuelve la temperatura actual en grados Celsius.
+
+Configuración de Pines (pinMode(pin, mode)): Prepara los pines GPIO físicos como entrada (0) o salida (1).
+
+Control Digital (digitalWrite(pin, val)): Envía señales eléctricas de encendido (HIGH / 1) o apagado (LOW / 0) a los pines para controlar LEDs, relés o motores
