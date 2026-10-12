@@ -1,0 +1,3 @@
+Module: input
+Description: Prompts the user for an integer value via terminal and stores it in a variable.
+Syntax: user_val = input()
