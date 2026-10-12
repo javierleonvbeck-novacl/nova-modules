@@ -1,0 +1,50 @@
+Modulo: thread
+
+Descripcion:
+Este modulo amplía el intérprete de Nova con funciones específicas para thread.
+Su objetivo es encapsular comportamiento reutilizable y mantener el núcleo del lenguaje más limpio.
+Cada módulo se registra en el sistema de handlers para poder ser invocado desde un script.
+
+Funcion principal:
+- El motor analiza cada línea del programa.
+- Cuando detecta una instrucción del módulo, la delega al handler correspondiente.
+- El handler valida la sintaxis y modifica el entorno de variables si la operación es válida.
+
+Como funciona:
+El archivo del módulo contiene una función de manejo con la firma del intérprete.
+El nombre de la función suele terminar con el tipo de acción que ejecuta el módulo.
+Al cargar el programa, el constructor del módulo llama a register_handler(...).
+Esto hace que el intérprete pueda reconocer la instrucción sin cambiar la lógica principal.
+
+Sintaxis sugerida:
+- hilo = thread(1)
+- hilo = thread(1)
+
+Reglas básicas:
+1. La instrucción debe ser escrita con el formato esperado por el módulo.
+2. Los nombres de variable deben usarse sin espacios y sin caracteres raros.
+3. Las expresiones numéricas o textuales se evalúan con el entorno actual del programa.
+4. Si la línea no coincide con la sintaxis del módulo, se ignora y continúa la ejecución.
+
+Ejemplo de uso:
+hilo = thread(1)
+print(resultado)
+
+Flujo de ejecución:
+- El intérprete lee la línea del script.
+- El módulo recibe la línea como texto.
+- Se parsea la expresión.
+- Se obtiene el valor o efecto solicitado.
+- La variable o resultado se guarda en el entorno del programa.
+
+Buenas prácticas:
+- Mantener el archivo pequeño y enfocado en una tarea concreta.
+- Validar entradas antes de ejecutar operaciones complejas.
+- Usar nombres claros en variables y funciones para que el código del lenguaje sea legible.
+- Documentar cada nueva operación para facilitar la extensión del lenguaje.
+
+Nota final:
+Este módulo forma parte de la arquitectura modular de Nova, donde cada funcionalidad vive en su propia carpeta.
+De esta forma el lenguaje puede crecer sin mezclar lógica central con comportamientos específicos de hardware, red o sistema.
+
+Uso general:
